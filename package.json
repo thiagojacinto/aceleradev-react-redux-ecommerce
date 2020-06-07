@@ -1,0 +1,17 @@
+{
+  "name": "aceleradev-react-ecommerce",
+  "version": "1.0.0",
+  "description": "Final project of AceleraDev's React program: building an e-commerce webapp with React & Redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "redux",
+    "ecommerce"
+  ],
+  "author": "Thiago Jacinto",
+  "license": "MIT"
+}
