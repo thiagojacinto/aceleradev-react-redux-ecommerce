@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import '../../styles/globalStyles.css';
- 
+import Routes from "../../routes";
+import Topbar from "../Topbar";
+import Footer from "../Footer";
+
+import "../../styles/globalStyles.css";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +23,18 @@ function App() {
           Learn React
         </a>
       </header>
+      <BrowserRouter>
+        <Topbar />
+
+        <Routes />
+
+        <Footer 
+          authorName="Thiago Jacinto"
+          githubLink="https://github.com/thiagojacinto"
+          twitterLink="https://twitter.com/higuetari"
+        />
+      </BrowserRouter>
+
     </div>
   );
 }
