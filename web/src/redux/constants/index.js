@@ -1,0 +1,7 @@
+const ShoppingConstants = {
+  GET_PRODUCT_LIST: "GET_PRODUCT_LIST",
+  ADD_PRODUCT_TO_CART: "ADD_PRODUCT_TO_CART",
+  REMOVE_PRODUCT_FROM_CART: "REMOVE_PRODUCT_FROM_CART",
+};
+
+export default ShoppingConstants;
