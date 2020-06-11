@@ -11,7 +11,8 @@ const catalogReducer = (state = CatalogInitialState, action) => {
     case ShoppingConstants.GET_PRODUCT_LIST:
       return {
         ...state,
-        catalog: payload.filter(({product}) => product),
+        // catalog: payload.filter(({product}) => product),
+        catalog: payload,
       };
     default:
       return state;
