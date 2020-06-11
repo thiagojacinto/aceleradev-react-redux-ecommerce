@@ -1,5 +1,8 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+
+import store from "../../redux/store";
 
 import Routes from "../../routes";
 import Topbar from "../Topbar";
@@ -9,33 +12,21 @@ import "../../styles/globalStyles.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <BrowserRouter>
-        <Topbar />
+    <Provider store={store}>
+      <div className="app" data-testid="app">
+        <BrowserRouter>
+          <Topbar />
 
-        <Routes />
+          <Routes />
 
-        <Footer 
-          authorName="Thiago Jacinto"
-          githubLink="https://github.com/thiagojacinto"
-          twitterLink="https://twitter.com/higuetari"
-        />
-      </BrowserRouter>
-
-    </div>
+          <Footer
+            authorName="Thiago Jacinto"
+            githubLink="https://github.com/thiagojacinto"
+            twitterLink="https://twitter.com/higuetari"
+          />
+        </BrowserRouter>
+      </div>
+    </Provider>
   );
 }
 
