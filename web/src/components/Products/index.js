@@ -1,4 +1,4 @@
-import ProductItem from '../Product';
-import ProductsList from './Product';
+import ProductItem from './ProductItem';
+import ProductsList from './ProductsList';
 
 export default { ProductItem, ProductsList };

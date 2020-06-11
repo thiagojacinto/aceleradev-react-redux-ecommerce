@@ -2,18 +2,22 @@ import React from "react";
 
 import ProductItem from "./ProductItem";
 
-export const ProductList = ({ products }) => {
+const ProductsList = ({ products, url }) => {
   return (
     <section className="product__list">
       <div className="container">
-        {products.map((item) => {
+        {products && products.map((item) => {
           return (
             <ProductItem
-              key={item.id}
-              imageUrl={item.imageUrl}
-              description={item.description}
-              regularPrice={item.price}
-              discountPercentile={item.discount ? item.discount : 0}
+              key={item.style}
+              id={item.style}
+              url={url}
+              imageUrl={item.image}
+              description={item.name}
+              regularPrice={item.regular_price}
+              actualPrice={item.actual_price}
+              discountPercentile={item.discount_percentage}
+              installments={item.installments}
             />
           );
         })}
@@ -22,4 +26,4 @@ export const ProductList = ({ products }) => {
   );
 };
 
-export default ProductList;
+export default ProductsList;

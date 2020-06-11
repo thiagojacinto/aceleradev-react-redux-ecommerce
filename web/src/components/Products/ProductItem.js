@@ -1,23 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import './Product.css';
+import "./Product.css";
 
 export const Product = ({
   imageUrl,
   description,
   regularPrice,
-  discountPercentile = 0,
+  actualPrice,
+  discountPercentile,
+  id,
+  url,
 }) => {
-
-  const price = (discountPercentile > 0
-    ? (regularPrice * (100 - discountPercentile)) / 100
-    : regularPrice
-  ).toFixed(2);
+  const price = regularPrice === actualPrice ? regularPrice : actualPrice;
 
   return (
     <article className="product__item">
       <figure className="product__item__figure">
-        <img src={imageUrl} alt="" />
+        <img src={imageUrl} alt={`product id: ${id}`} />
 
         {discountPercentile > 0 && (
           <div className="discount">
@@ -28,10 +28,12 @@ export const Product = ({
         <figcaption>{description}</figcaption>
       </figure>
 
-      <h5 className="product__item__description">{description}</h5>
+      <Link to={`${url}/${id}`}>
+        <h5 className="product__item__description">{description}</h5>
+      </Link>
 
       <div className="product__item__price">
-        {discountPercentile > 0 && (
+        {discountPercentile === "" && (
           <span className="regular__price">{regularPrice}</span>
         )}
 
