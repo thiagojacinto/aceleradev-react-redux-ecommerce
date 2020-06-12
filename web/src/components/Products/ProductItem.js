@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./Product.css";
+import imagePlaceholder from '../../assets/img-item-placeholder.png';
 
-export const Product = ({
+const ProductItem = ({
   imageUrl,
   description,
   regularPrice,
@@ -13,13 +14,13 @@ export const Product = ({
   url,
 }) => {
   const price = regularPrice === actualPrice ? regularPrice : actualPrice;
-
+  if (imageUrl === "") imageUrl = imagePlaceholder;
   return (
     <article className="product__item">
       <figure className="product__item__figure">
         <img src={imageUrl} alt={`product id: ${id}`} />
 
-        {discountPercentile > 0 && (
+        {discountPercentile !== "" && (
           <div className="discount">
             <span>{`-${discountPercentile}%`}</span>
           </div>
@@ -33,7 +34,7 @@ export const Product = ({
       </Link>
 
       <div className="product__item__price">
-        {discountPercentile === "" && (
+        {discountPercentile !== "" && (
           <span className="regular__price">{regularPrice}</span>
         )}
 
@@ -43,4 +44,4 @@ export const Product = ({
   );
 };
 
-export default Product;
+export default ProductItem;
