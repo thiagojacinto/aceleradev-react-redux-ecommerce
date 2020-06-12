@@ -5,8 +5,8 @@ import { Provider } from "react-redux";
 import store from "../../redux/store";
 
 import Routes from "../../routes";
-import Topbar from "../Topbar";
-import Footer from "../Footer";
+import Topbar from "../../components/Topbar";
+import Footer from "../../components/Footer";
 
 import "../../styles/globalStyles.css";
 
