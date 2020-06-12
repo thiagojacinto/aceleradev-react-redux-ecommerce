@@ -1,9 +1,14 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from '../components/App/App';
+import React from "react";
+import { render } from "@testing-library/react";
+import App from "../containers/App/App";
+import Footer from "../components/Footer";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("Render author sign in Footer", () => {
+  const author = "Thiago Jacinto";
+  const { getByText } = render(<Footer authorName={author} />);
+  const authorSign = getByText(/Thiago Jacinto/i);
+  expect(authorSign).toBeInTheDocument();
+});
+
+test("Render searchbar in Search", () => {
 });
