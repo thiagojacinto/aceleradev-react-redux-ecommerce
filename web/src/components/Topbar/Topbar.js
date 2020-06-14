@@ -2,10 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Search } from "@styled-icons/fa-solid";
 
-import { CartIcon } from "../Cart";
 import Logo from "../../assets/logo.png";
 
-export const Topbar = ({ iconsSize = "30" }) => {
+export const Topbar = ({ children = null, iconsSize = "30" }) => {
   return (
     <nav className="topbar">
       <div className="container">
@@ -24,7 +23,7 @@ export const Topbar = ({ iconsSize = "30" }) => {
 
           <div className="topbar__extra-shopping_cart">
             <Link to="/cart">
-              <CartIcon iconSize={iconsSize} />
+              {children !== null && React.Children.only(children)}
             </Link>
           </div>
         </section>
