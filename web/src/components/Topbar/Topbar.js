@@ -1,29 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Search } from "@styled-icons/fa-solid";
 
-import { Search, ShoppingCart } from "@styled-icons/fa-solid";
+import { CartIcon } from "../Cart";
+import Logo from "../../assets/logo.png";
 
-export const Topbar = (props) => {
+export const Topbar = ({ iconsSize = "30" }) => {
   return (
     <nav className="topbar">
       <div className="container">
-
         <section className="topbar__logo">
           <Link to="/">
-            <img src="../../../public/rio_negro-small.png" alt="logo" />
+            <img src={Logo} alt="logo" />
           </Link>
         </section>
 
         <section className="topbar__extra">
           <div className="topbar__extra-search">
             <Link to="/search">
-              <Search size="24" />
+              <Search size={iconsSize} />
             </Link>
           </div>
 
           <div className="topbar__extra-shopping_cart">
             <Link to="/cart">
-              <ShoppingCart size="24" />
+              <CartIcon iconSize={iconsSize} />
             </Link>
           </div>
         </section>
