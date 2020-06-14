@@ -20,7 +20,7 @@ const cartReducer = (state = CartInitialState, action) => {
       return {
         ...state,
         count: state.count - 1,
-        items: state.items.filter((item) => item.id !== payload.productId),
+        items: state.items.filter((item) => item.sku !== payload.productId),
       };
     case ShoppingConstants.GET_PRODUCTIDS_FROM_CART:
       return {
