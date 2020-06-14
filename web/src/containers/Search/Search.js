@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import ProductItem from "../../components/Products/ProductItem";
-import { useState } from "react";
-import { useEffect } from "react";
+import BackButton from "../../components/BackButton/BackButton";
+import { useSelector } from "react-redux";
 
-const Search = ({ url, allProducts }) => {
+const Search = ({ url }) => {
+  const allProducts = useSelector((state) => state.catalog.catalog);
   let [foundItems, setFoundItems] = useState([]);
   let [searchText, setSearchText] = useState("");
 
   const onChange = (event) => {
     event.preventDefault();
+    event.stopPropagation();
     let searchInput = event.target.value;
 
     if (searchInput.length > 3) {
@@ -46,17 +48,23 @@ const Search = ({ url, allProducts }) => {
             />
           </fieldset>
         </form>
+
+        <BackButton />
+
         <div className="search__results">
           {foundItems.length > 0 &&
             foundItems.map((item) => {
               return (
                 <ProductItem
-                  key={item.style}
-                  id={item.style}
+                  key={item.code_color}
+                  id={item.code_color}
                   url={url}
                   imageUrl={item.image}
                   description={item.name}
                   actualPrice={item.actual_price}
+                  regularPrice={item.regular_price}
+                  onSale={item.on_sale}
+                  discountPercentile={item.discount_percentage}
                 />
               );
             })}
