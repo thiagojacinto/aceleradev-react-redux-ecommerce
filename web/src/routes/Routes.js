@@ -10,14 +10,14 @@ import {
   addProductToCart,
   removeProductFromCart,
 } from "../redux/actions";
-import { Catalog } from "../containers";
+import { Catalog, ProductDetail } from "../containers";
 import { Search } from "../containers";
 
 const { getProducts } = endpoints;
 
 const Routes = () => {
   const dispatch = useDispatch();
-  const { path, url } = useRouteMatch();
+  const { path } = useRouteMatch();
 
   useEffect(() => {
     // axios(getProducts)
@@ -26,19 +26,23 @@ const Routes = () => {
     dispatch(getProductList(catalogMock));
   }, [dispatch]);
 
-  const { cart, catalog } = useSelector((state) => state);
+  const { cart } = useSelector((state) => state);
+
+  const productDetail = `${path}product`;
 
   return (
     <Switch>
       <Route exact path="/">
-        <Catalog products={catalog.catalog} url={url} />
+        <Catalog url={productDetail} />
       </Route>
 
       <Route path={`/search`}>
-        <Search url={url} allProducts={catalog.catalog} />
+        <Search url={productDetail} />
       </Route>
 
-      <Route path={`${path}/:productId`} />
+      <Route path={`${productDetail}/:productId`}>
+        <ProductDetail />
+      </Route>
     </Switch>
   );
 };
