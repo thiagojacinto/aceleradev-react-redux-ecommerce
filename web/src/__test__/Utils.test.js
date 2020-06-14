@@ -1,8 +1,4 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import App from "../containers/App/App";
-import Footer from "../components/Footer";
-import catalogMock from "../__test__/mockups/catalog.json";
+import catalogMock from "./mockups/catalog.json";
 import { applyImagePlaceholderIfBlank } from "../utils/placeholder";
 import imagePlaceholder from "../assets/img-item-placeholder.png";
 import { searchByProductId } from "../utils/searchByProductId";
