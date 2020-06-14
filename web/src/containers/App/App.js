@@ -7,6 +7,7 @@ import store from "../../redux/store";
 import Routes from "../../routes";
 import Topbar from "../../components/Topbar";
 import Footer from "../../components/Footer";
+import CartWithBadge from "../ShoppingCart/CartBadge";
 
 import "../../styles/globalStyles.css";
 
@@ -15,7 +16,9 @@ function App() {
     <Provider store={store}>
       <div className="app" data-testid="app">
         <BrowserRouter>
-          <Topbar />
+          <Topbar>
+            <CartWithBadge />
+          </Topbar>
 
           <Routes />
 

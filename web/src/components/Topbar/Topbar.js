@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Search } from "@styled-icons/fa-solid";
 
 import Logo from "../../assets/logo.png";
 
 export const Topbar = ({ children = null, iconsSize = "30" }) => {
+  let location = useLocation();
+
   return (
     <nav className="topbar">
       <div className="container">
@@ -22,7 +24,7 @@ export const Topbar = ({ children = null, iconsSize = "30" }) => {
           </div>
 
           <div className="topbar__extra-shopping_cart">
-            <Link to="/cart">
+            <Link to={{ pathname: "/cart", state: { background: location } }}>
               {children !== null && React.Children.only(children)}
             </Link>
           </div>
