@@ -1,5 +1,9 @@
 import React from "react";
-import { TwitterSquare, LinkedinIn, GithubSquare } from "@styled-icons/fa-brands";
+import {
+  TwitterSquare,
+  LinkedinIn,
+  GithubSquare,
+} from "@styled-icons/fa-brands";
 
 export const Footer = ({
   authorName,
@@ -14,21 +18,20 @@ export const Footer = ({
           <span>
             Criado por
             <a href={githubLink} target="_blank" rel="noopener noreferrer">
-              {" "}
-              {authorName}
+              {` ${authorName}`}
             </a>
           </span>
         </section>
 
         <section className="footer__social-links">
-        <a
-              className="footer__social__github"
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GithubSquare size="30" />
-            </a>
+          <a
+            className="footer__social__github"
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubSquare size="30" />
+          </a>
 
           {twitterLink && (
             <a
