@@ -41,6 +41,7 @@ export const ProductDetail = () => {
         <ErrorProductNotFound />
       ) : (
         <ProductView
+          id={selectedProduct.code_color}
           imageUrl={imageUrl}
           description={selectedProduct.name}
           regularPrice={selectedProduct.regular_price}
