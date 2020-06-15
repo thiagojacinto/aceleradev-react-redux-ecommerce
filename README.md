@@ -4,10 +4,11 @@ A proposta do projeto final do curso `AceleraDev - React` promovido [Codenation]
 
 ## Como utilizar
 
-O projeto desenvolvido está no diretório [`/web`](https://github.com/thiagojacinto/aceleradev-react-redux-ecommerce/tree/master/web), então navegue no caminho após clonar este repositório e dê partida no servidor local, com npm ou yarn já que foi utilizado o [create-react-app](https://create-react-app.de) para gerir as configurações iniciais, digitando:
+O projeto desenvolvido está no diretório [`/web`](https://github.com/thiagojacinto/aceleradev-react-redux-ecommerce/tree/master/web), então navegue no caminho após clonar este repositório, instalar as dependências necessárias e então dar partida no servidor local, com npm ou yarn já que foi utilizado o [create-react-app](https://create-react-app.de) para gerir as configurações iniciais, digitando:
 
 ```
 cd web
+npm install
 npm start
 ```
 E então acessar diretamente pelo navegador de preferência o endereço http://localhost:3000.
