@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Route, Switch, useRouteMatch, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
-// import axios from "axios";
-import catalogMock from "../__test__/mockups/catalog.json";
+import axios from "axios";
+// import catalogMock from "../__test__/mockups/catalog.json";
 
 import endpoints from "../utils/endpoints";
 import { getProductList } from "../redux/actions";
@@ -18,10 +18,10 @@ const Routes = () => {
   let location = useLocation();
 
   useEffect(() => {
-    // axios(getProducts)
-    //   .then((data) => data.data)
-    //   .then((res) => dispatch(getProductList(res)));
-    dispatch(getProductList(catalogMock));
+    axios(getProducts)
+      .then((data) => data.data)
+      .then((res) => dispatch(getProductList(res)));
+    // dispatch(getProductList(catalogMock));
   }, [dispatch]);
 
   const productDetail = `${path}product`;
