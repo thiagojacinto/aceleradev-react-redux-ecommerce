@@ -52,7 +52,7 @@ Como um profissional front-end, você será responsável por desenvolver as prin
 
 ## Deploy
 
-Link para protótipo disponível online.
+Link para protótipo disponível online => https://rio-negro-store.netlify.app/
 
 ## Autor
 
