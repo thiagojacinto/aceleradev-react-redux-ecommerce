@@ -1,0 +1,35 @@
+nav.topbar .container {
+  height: 4em;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.topbar__logo {
+  width: auto;
+  height: 4em;
+  padding: 0.3em;
+}
+
+.topbar__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.topbar__extra {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.topbar__extra .topbar__extra-shopping_cart {
+  padding-left: 2em;
+  padding-right: 2em;
+}

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Search } from "@styled-icons/fa-solid";
 
 import Logo from "../../assets/logo.png";
+import "./Topbar.css";
 
 export const Topbar = ({ children = null, iconsSize = "30" }) => {
   let location = useLocation();
