@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./Product.css";
+import "./ProductItem.css";
 import { applyImagePlaceholderIfBlank } from "../../utils/placeholder";
 
 const ProductItem = ({
@@ -17,8 +17,8 @@ const ProductItem = ({
   const price = regularPrice === actualPrice ? regularPrice : actualPrice;
   imageUrl = applyImagePlaceholderIfBlank(imageUrl);
   return (
-    <article className="product__item">
-      <figure className="product__item__figure">
+    <article className="product__item box">
+      <figure className="product__item__figure figurefx pushup">
         <img src={imageUrl} alt={`product id: ${id}`} />
 
         {onSale && (
@@ -27,7 +27,7 @@ const ProductItem = ({
           </div>
         )}
 
-        <figcaption>{description}</figcaption>
+        {/* <figcaption>{description}</figcaption> */}
       </figure>
 
       <Link to={`${url}/${id}`}>
