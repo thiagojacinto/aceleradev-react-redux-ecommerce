@@ -4,6 +4,8 @@ import ProductItem from "../../components/Products/ProductItem";
 import BackButton from "../../components/BackButton/BackButton";
 import { useSelector } from "react-redux";
 
+import "./Search.css";
+
 const Search = ({ url }) => {
   const allProducts = useSelector((state) => state.catalog.catalog);
   let [foundItems, setFoundItems] = useState([]);
@@ -35,7 +37,7 @@ const Search = ({ url }) => {
 
   return (
     <section className="search">
-      <aside className="search__bar">
+      <div className="search__bar__controls">
         <form method="get">
           <fieldset>
             <label className="search__bar__label">Procure pelo produto</label>
@@ -50,7 +52,8 @@ const Search = ({ url }) => {
         </form>
 
         <BackButton />
-
+      </div>
+      <aside className="search__bar">
         <div className="search__results">
           {foundItems.length > 0 &&
             foundItems.map((item) => {
