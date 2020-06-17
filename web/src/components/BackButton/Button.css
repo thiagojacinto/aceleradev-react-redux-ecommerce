@@ -1,0 +1,22 @@
+.button-styled {
+  background-color: #835a62;
+  color: #ffcdb2;
+  box-shadow: 0 5px 0 #6d6875;
+  padding: 0.5em 1em;
+  margin: 0 0.6em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+
+  font-size: 0.8em;
+}
+
+.button-styled:hover {
+  background-color: #6d4a51;
+  cursor: pointer;
+}
+
+.button-styled:active {
+  box-shadow: none;
+  top: 0.3em;
+}

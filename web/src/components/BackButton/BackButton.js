@@ -1,6 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
+import "./Button.css";
+
 export const BackButton = () => {
   const history = useHistory();
 
@@ -10,7 +12,10 @@ export const BackButton = () => {
   };
 
   return (
-    <button className="back__button" onClick={(e) => handleBack(e)}>
+    <button
+      className="back__button button-styled"
+      onClick={(e) => handleBack(e)}
+    >
       Voltar
     </button>
   );
