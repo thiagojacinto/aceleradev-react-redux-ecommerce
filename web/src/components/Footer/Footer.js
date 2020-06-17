@@ -5,6 +5,8 @@ import {
   GithubSquare,
 } from "@styled-icons/fa-brands";
 
+import "./Footer.css";
+
 export const Footer = ({
   authorName,
   githubLink,
@@ -13,7 +15,7 @@ export const Footer = ({
 }) => {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container gradient__animation">
         <section className="footer__description">
           <span>
             Criado por

@@ -1,0 +1,40 @@
+@import url("../../styles/gradientAnimation.css");
+
+footer.footer {
+  height: 10vh;
+}
+
+footer .container {
+  height: inherit;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer__description {
+  font-size: 1em;
+}
+
+.footer__description a {
+  background-color: #835a62;
+  color: #ffcdb2;
+  box-shadow: 0 5px 0 #6d6875;
+  padding: 0.5em 1em;
+  margin: 0 0.6em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+}
+
+.footer__description a:hover {
+  background-color: #6d4a51;
+  cursor: pointer;
+}
+
+.footer__description a:active {
+  box-shadow: none;
+  top: 0.3em;
+}
