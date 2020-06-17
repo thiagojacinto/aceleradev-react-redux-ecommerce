@@ -1,0 +1,44 @@
+/* SOURCE: https://www.gradient-animator.com/ */
+
+.gradient__animation {
+  background: linear-gradient(239deg, #6d6875, #b5838d, #e5989b);
+  background-size: 600% 600%;
+
+  -webkit-animation: footer-gradient 14s ease infinite;
+  -moz-animation: footer-gradient 14s ease infinite;
+  animation: footer-gradient 14s ease infinite;
+}
+
+@-webkit-keyframes footer-gradient {
+  0% {
+    background-position: 0% 54%;
+  }
+  50% {
+    background-position: 100% 47%;
+  }
+  100% {
+    background-position: 0% 54%;
+  }
+}
+@-moz-keyframes footer-gradient {
+  0% {
+    background-position: 0% 54%;
+  }
+  50% {
+    background-position: 100% 47%;
+  }
+  100% {
+    background-position: 0% 54%;
+  }
+}
+@keyframes footer-gradient {
+  0% {
+    background-position: 0% 54%;
+  }
+  50% {
+    background-position: 100% 47%;
+  }
+  100% {
+    background-position: 0% 54%;
+  }
+}
