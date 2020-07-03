@@ -1,6 +1,6 @@
 {
-  "name": "web",
-  "version": "0.1.0",
+  "name": "rio-negro-store",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@styled-icons/fa-brands": "^10.0.0",
