@@ -14,7 +14,12 @@ const ProductView = ({
   onSaleFlag,
   id,
 }) => {
-  let [selectedProductId, setSelectedProductId] = useState({ sku: "", id: id });
+  let [selectedProductId, setSelectedProductId] = useState({
+    sku: "",
+    id: id,
+    quantity: 1,
+    price: actualPrice,
+  });
   const dispatch = useDispatch();
 
   const handleProductSelection = (event) => {
@@ -75,7 +80,7 @@ const ProductView = ({
             <div className="options__picker">
               {sizeOptions.map((item) => (
                 <button
-                  key={id}
+                  key={item.sku}
                   className="size__option"
                   data-sku={item.sku}
                   onClick={(e) => handleProductSelection(e)}
