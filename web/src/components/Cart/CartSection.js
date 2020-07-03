@@ -32,7 +32,7 @@ export const CartSection = () => {
         total.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
       )
     );
-  }, [cart.items]);
+  }, [cart.items, dispatch]);
 
   return (
     <div className="cart__display" onClick={(e) => handleBack(e)}>
